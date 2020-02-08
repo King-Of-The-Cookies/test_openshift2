@@ -1,0 +1,18 @@
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: testopenshift-build
+  labels:
+    app: testopenshift
+spec:
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/King-Of-The-Cookies/test_openshift
+      ref: master
+  strategy:
+    type: Docker
+  output:
+    to:
+      kind: ImageStreamTag
+      name: testopenshift:1
