@@ -18,7 +18,17 @@ spec:
             - containerPort: 8080
               protocol: TCP
           command:
-            - uwsgi uwsgi.ini
+            - uwsgi
+          args:
+          - uwsgi.ini
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+
   replicas: 1
   strategy:
     type: Rolling

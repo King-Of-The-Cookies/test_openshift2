@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: test-openshift-template
+  labels:
+    app: testopenshift
+  annotations:
+    description: "This is the very elaborate description of this template, ok doei"
+objects:
+  - apiVersion: v1
+    kind: ImageStream
+    metadata:
+      name: testopenshift
+      labels:
+        app: testopenshift
+    spec:
+      dockerImageRepository: ""
+  - apiVersion: v1
+    kind: BuildConfig
+    metadata:
+      name: testopenshift
+      labels:
+        app: testopenshift
+    spec:
+      runPolicy: Serial
+      source:
+        git:
+          uri: https://github.com/King-Of-The-Cookies/test_openshift.git
+          ref: ${GIT_BRANCH}
+      strategy:
+        type: Docker
+      output:
+        to:
+          kind: ImageStreamTag
+          name: testopenshift:${IMAGE_TAG}
+    resources:
+      requests:
+        cpu: 500m
+        memory: 1024Mi
+      limits:
+        cpu: 1
+        memory: 2Gi
+
+parameters:
+  - name: GIT_BRANCH
+    description: "branch of the repo to clone"
+    value: master
+    required: false
+  - name: IMAGE_TAG
+    description: "tag of the image to use"
+    required: true
