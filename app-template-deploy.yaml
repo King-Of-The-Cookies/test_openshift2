@@ -5,6 +5,18 @@ metadata:
   labels:
     app: testopenshift
 objects:
+
+  - apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      name: claim1
+    spec:
+      resources:
+        requests:
+          storage: 1Gi
+      accessModes:
+        - ReadWriteOnce
+
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
@@ -49,6 +61,8 @@ objects:
               volumeMounts:
                 - name: config
                   mountPath: /app/volumes/nginx_conf
+                - name: data
+                  mountPath: /app/volumes
           volumes:
             - name: config
               configMap:
@@ -56,7 +70,9 @@ objects:
                 items:
                   - key: someconf.conf
                     path: nginx.conf
-
+            - name: data
+              persistentVolumeClaim:
+                claimName: claim1
       replicas: 1
       strategy:
         type: Rolling
@@ -91,6 +107,7 @@ objects:
     data:
       VAR1: hi
       VAR2: bye
+
 
 
 

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="390d4833-02d3-4834-8be1-664ee5d8220f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app-template-build.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-template-deploy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/someconf.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongodb/imagestream-mongo.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongodb/template-deploy-mongodb.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-template-deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app-template-deploy.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <workItem from="1581097145116" duration="2907000" />
       <workItem from="1581168239734" duration="2000" />
       <workItem from="1581171607297" duration="1659000" />
-      <workItem from="1581320657596" duration="13038000" />
+      <workItem from="1581320657596" duration="20910000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1581079353519</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581171856154</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="initial commit">
+      <created>1581345293745</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581345293745</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,13 +147,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="696" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581079579815" />
-    <state x="568" y="138" width="778" height="800" key="CommitChangelistDialog2" timestamp="1581171856062">
+    <state x="568" y="138" width="778" height="800" key="CommitChangelistDialog2" timestamp="1581345293657">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="568" y="138" width="778" height="800" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581171856062" />
-    <state x="558" y="277" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1581171876940">
+    <state x="568" y="138" width="778" height="800" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581345293657" />
+    <state x="558" y="277" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1581345300924">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="558" y="277" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581171876940" />
+    <state x="558" y="277" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581345300924" />
   </component>
 </project>
